@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  width: 56%;
+  margin: 20px 22% 30px 22%;
+  color: rgb(79, 177, 14);
+  text-align: center;
+  font-size: 50px;
+}
+
+.lane {
+  width: 50%;
+  height: 100px;
+  border: solid 1px rgb(196, 118, 29);
+  border-radius: 30px;
+  margin: 30px 25%;
+  position: relative;
+  display: flex;
+}
+.lane .p1 {
+  z-index: -1;
+}
+.lane .icon {
+  width: 50px;
+  margin: 25px;
+}
+.lane .icon img {
+  width: 50px;
+}
+.lane .icon.up-icon img {
+  border-radius: 30px;
+  border: 4px solid greenyellow;
+}
+.lane.title {
+  margin-bottom: -70px;
+  border: unset;
+}
+.lane.title p {
+  color: aliceblue;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: rgba(255, 156, 91, 0.774);
+}
+.lane.title .advantage {
+  border: unset;
+}
+.lane.title .role img {
+  width: 80%;
+  margin-top: -30px;
+}
+.lane.title .role i {
+  font-size: 36px;
+  color: aqua;
+  margin-top: -30px;
+  margin-left: 20px;
+}
+.lane .input {
+  width: 250px;
+  height: 100%;
+}
+.lane .input input {
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  color: brown;
+  font-size: 30px;
+  margin: 25px 25px;
+  border-radius: 15px;
+}
+.lane .sex {
+  width: 150px;
+  height: 100px;
+  display: flex;
+}
+.lane .sex .male, .lane .sex .female {
+  width: 50%;
+  height: 80px;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+.lane .sex .male {
+  color: rgb(95, 192, 248);
+  text-shadow: -4px 5px 3px #6fbce0;
+}
+.lane .sex .male:hover {
+  color: rgb(95, 192, 248);
+  text-shadow: -4px 5px 3px #7dd4fc;
+  font-size: 40px;
+  padding-top: 20px;
+}
+.lane .sex .female {
+  color: rgb(223, 4, 40);
+  text-shadow: -4px 5px 3px #d83e3e;
+}
+.lane .sex .female:hover {
+  color: rgb(223, 4, 40);
+  text-shadow: -4px 5px 3px #ee3737;
+  font-size: 40px;
+  padding-top: 20px;
+}
+.lane .sex .non-active {
+  color: gray;
+  font-size: 30px;
+  padding-top: 25px;
+  text-shadow: unset;
+}
+.lane .advantage {
+  height: 100px;
+  width: 300px;
+  padding: 20px 20px;
+  color: rgb(202, 209, 200);
+  text-align: center;
+  border-left-style: double;
+  border-right-style: double;
+  border-color: rgb(233, 146, 47);
+}
+.lane .advantage p {
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+.lane .advantage button {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(241, 247, 161);
+  border: 3px solid rgb(75, 62, 22);
+  border-radius: 20px;
+  margin: 5px 75px;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.lane .advantage button:hover {
+  background-color: rgb(172, 204, 150);
+  border-color: gray;
+}
+.lane .role {
+  height: 98px;
+  width: 130px;
+  display: flex;
+  padding-left: 15px;
+}
+.lane .role .choose-cap, .lane .role .choose-main {
+  width: 50%;
+  text-align: center;
+  margin: 35px 0px;
+}
+.lane .role .choose-cap input, .lane .role .choose-main input {
+  font-size: 22px;
+}
+.lane .role .choose-cap img, .lane .role .choose-main img {
+  width: 100%;
+}
+.lane .adding {
+  width: 350px;
+  height: 200px;
+  background-color: rgb(18, 36, 97);
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 75px;
+  z-index: 8;
+  border: solid 3px rgb(65, 61, 6);
+  border-radius: 3px;
+  display: none;
+}
+.lane .adding.being {
+  display: unset;
+}
+.lane .adding .add {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.lane .adding .add .items {
+  height: 100%;
+  width: 66%;
+  background-color: #060769;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+}
+.lane .adding .add .items .item {
+  width: 100%;
+  border: 1px solid rgba(245, 222, 179, 0.404);
+  padding: 5% 0 0 0;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+}
+.lane .adding .add .items .item .detail {
+  width: 300px;
+  height: 120px;
+  position: absolute;
+  margin-top: -140px;
+  margin-left: -150px;
+  display: none;
+}
+.lane .adding .add .items .item:hover img {
+  border: 2px solid gray;
+}
+.lane .adding .add .items .item:hover .detail {
+  display: unset;
+}
+.lane .adding .add .items .item img {
+  width: 50%;
+  display: block;
+  margin-left: 25%;
+  border-radius: 20px;
+}
+.lane .adding .add .items .item img.picked {
+  border: 3px solid rgb(29, 173, 37);
+}
+.lane .adding .add .items .item .content {
+  width: 300px;
+  height: 120px;
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 20px;
+  color: #060769;
+  padding: 30px 20px;
+}
+.lane .adding .add .increase {
+  height: 100%;
+  width: 34%;
+  text-align: center;
+}
+.lane .adding .add .increase button {
+  width: 18%;
+  height: 8%;
+  margin-left: 82%;
+  font-weight: bolder;
+  font-size: 13px;
+  background-color: #b1121a;
+  padding: 0;
+  border: 1px solid rgba(245, 222, 179, 0.404);
+}
+.lane .adding .add .increase button:hover {
+  background-color: #790e14;
+  color: gainsboro;
+}
+
+.btn {
+  width: 30%;
+  height: 100px;
+  margin: 15px 35%;
+  display: flex;
+}
+.btn button {
+  width: 150px;
+  height: 60px;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 30px;
+  background-color: rgb(39, 94, 55);
+  color: rgba(193, 202, 209, 0.685);
+}
+.btn button:hover {
+  background-color: rgb(47, 216, 75);
+  color: black;
+}
+.btn .clear, .btn .next {
+  width: 50%;
+  height: 60px;
+  padding-top: 20px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

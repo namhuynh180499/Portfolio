@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<body style="background-image: url(/image/background/bg_theme_01.jpg) ;">
+     <script src="/scripts/teaminfo.js"></script>
+     <h1>INPUT YOUR TEAM...!</h1>
+     <div class="lane title">
+          <div class="icon"></div>
+          <div class="input"><p>Player's name</p></div>
+          <div class="sex"><p>Sex</p></div>
+          <div class="advantage"><p><span class="fa fa-star checked" style ="color: yellow;"></span>&nbsp; ƯU ĐIỂM</p></div>
+          <div class="role">  
+               <div class="choose-cap"><img src="/image/icon/captain.png" alt=""></div>
+               <div class="choose-main"><i class="fa fa-flag" aria-hidden="true"></i></div>
+          </div>
+     </div>
+
+                              <!--     LANES      -->
+     <div class="lane player1">
+          <div class="icon p1"></div>
+          <div class="input"><input class="p1" type="text" ></div>
+          <div class="sex">   
+               <div class="male sex1" onclick="changeSex(event)" value=true;>&#9794;</div>
+               <div class="female sex1 non-active" onclick="changeSex(event)">&#9792;</div>
+          </div>
+          <div class="advantage"><button class="p1" onclick="openAdd(event)">+</button></div>
+          <div class="role">
+               <div class="choose-cap"><input type="radio" class="p1" onclick="chooseCap(event)" name="cap"></div>
+               <div class="choose-main"><input type="radio" class="p1" onclick="chooseMain(event)" name="main"></div>
+          </div>
+         <div class="adding p1">
+              <div class="add">
+                    <div class="items">
+                         <div class="item item1"><div class="detail detail1"></div></div>
+                         <div class="item item2"><div class="detail detail2"></div></div>
+                         <div class="item item3"><div class="detail detail3"></div></div>
+                         <div class="item item4"><div class="detail detail4"></div></div>
+                         <div class="item item5"><div class="detail detail5"></div></div>
+                         <div class="item item6"><div class="detail detail6"></div></div>
+                         <div class="item item7"><div class="detail detail7"></div></div>
+                         <div class="item item8"><div class="detail detail8"></div></div>
+                         <div class="item item9"><div class="detail detail9"></div></div>
+                    </div> 
+                    <div class="increase">
+                         <button class="p1" onclick="closeAdd(event)">X</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="lane player2"></div>
+     <div class="lane player3"></div>
+     <div class="lane player4"></div>
+     <div class="lane player5"></div>
+
+
+                                   <!--     Set HTML for all players    -->
+     <script>
+          let copy = document.getElementsByClassName('lane')[1].innerHTML; // copy HTML từ player1
+          for(let i=2; i<6; i++){
+               document.querySelector('.player'+i).innerHTML+= copy;       // paste vào các player khác
+               
+               let p1 = document.getElementsByClassName('p1');      // lấy những html có class=p1
+               let a = p1.length;
+               for(let x=a/2;x<a;x++){
+                    p1[x].classList.add('p'+i);                     // thêm class mới cho player mới 
+               }
+               for(let x=1;x<(a/2)+1;x++){
+                    p1[a/2].classList.remove('p1');                 // xóa 1 nửa các class=p1 thuộc player mới
+               }
+
+               let sex1 = document.getElementsByClassName('sex1');
+               let b = sex1.length;
+               for(let x=b/2;x<b;x++) {
+                    sex1[x].classList.add('sex'+i);
+               }
+               for(let x=1;x<(b/2)+1;x++) {
+                    sex1[b/2].classList.remove('sex1');                
+               }
+          }
+          
+          for(let i=1;i<6;i++) {
+               document.getElementsByClassName('icon p'+i)[0].innerHTML += `<img src="/image/icon/lane/`+i+`.webp">`;
+          }
+
+          
+          for(let i=0;i<5;i++) {
+               let sl = Spells[i].length;
+               for(let x=1;x<=sl;x++) {
+                    document.getElementsByClassName(`item`+x)[i].innerHTML += `<img onclick="pickItem(event)" src="`+ Spells[i][x-1].img +`">` + Spells[i][x-1].name;
+                    document.getElementsByClassName(`detail`+x)[i].innerHTML += `<div class="content">`+(Spells[i][x-1].detail)+`</div>`;
+               }
+          }
+     </script>
+
+
+                                   <!--      BUTTONS      -->
+     <div class="btn">
+          <div class="clear"><button onclick="">CLEAR</button></div>
+          <div class="next"><button onclick="next()">NEXT</button></div>
+          
+          <script src="/scripts/btn/buttons.js"></script>
+     </div>
+     <script src="/scripts/script.js"></script>
+</body>
+
+</html>

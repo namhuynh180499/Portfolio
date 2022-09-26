@@ -1,0 +1,617 @@
+* {box-sizing: border-box;}
+h1 {
+    position: absolute;
+    width: 30%;
+    margin: 0 35%;
+    text-align: center;
+    font-weight: bolder;
+}
+.main {
+    position: relative;
+    width: 70%;
+    height: 800px;
+    margin: 50px 15% 0 15%;
+    display: flex;
+    .chienthuat {
+        position: absolute;
+        width: 20%;
+        height: 300px;
+        top: 0;
+        &.chienthuat1{top:0; left: -21%;}
+        &.chienthuat2{
+            top:0; 
+            margin-top: -20px;
+            left: 101%;
+            display: flex;
+            padding-top: 60px;
+            p {
+                position: absolute;
+                top : 0;
+                margin: 0;
+                width: 100%;
+                height: 60px;
+                // border: 2px solid rgb(179, 153, 6);
+                padding-top: 16px;
+                color: antiquewhite;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bolder;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .notes {
+                width: 15%;
+                height: 240px;
+                .note {
+                    width: 100%;
+                    height: 40px;
+                    border: solid 1px rgb(70, 67, 67);
+                    border-right: solid 3px grey;
+                    &.explain {
+                        border:solid 3px grey;
+                        border-right: unset;
+                        img{width: 70%; margin: 12% 12%;}
+                    }    
+                    img {
+                        width: 50%;
+                        margin: 25% 25%;
+                    }
+                }
+            }
+            .detail-note {  
+                width: 85%;
+                height: 240px;
+                border: solid 3px grey;
+                border-left: unset;
+                font-size: 20px;
+                color: wheat;
+                padding: 10px 12px;
+            }
+        }
+    }
+    .detail {
+        position: absolute;
+        width: 20%;
+        height: 550px;
+        background-color: rgba(0, 0, 0, 0.445);
+        padding: 0;
+        text-align: center;
+        color: rgb(219, 194, 49);
+        border: solid 3px rgb(168, 168, 156);
+        &.detail1{margin: 300px 0 0 -21%;}
+        &.detail2{margin: 300px 0 0 101%;}
+        h2 { 
+            height: 10%;
+            margin: 0; 
+            padding: 5% 0;
+            background-color: rgb(24, 37, 92);
+        }
+        .chiso {
+            width: 90%;
+            height: 210px;
+            margin: 0 25px;
+            padding: 0 10px;
+            background-color: unset;
+            display: flex;
+            .xuhuong {
+                width: 30%;
+                height: 210px;
+                p {
+                    width: 100%; 
+                    height: 33%;
+                    margin: 0;
+                    text-align: left;
+                    padding: 18px 0;
+                    font-size: 24px;
+                    font-weight: bolder;
+                    color: rgb(212, 224, 224);
+                }
+            }
+            .bieudo {
+                width: 75%;
+                height: 210px;
+                .dulieu {
+                    height: 26px;
+                    width: 85%;
+                    margin: 21px 0 42px 0;
+                    border: solid 2px rgb(187, 182, 182);
+                    border-radius: 3px;
+                    display: flex;
+                    .percent {
+                        height: 100%;
+                        width: 12.5%;
+                        border: solid 1px black ;
+                        border-radius: 3px;
+                    }
+                    &.dl1 {
+                        .percent {
+                        background-color: red;
+                            &.ing {
+                                animation: dl1 1s infinite;
+                                @keyframes dl1 {
+                                    0%  {background-color: red}
+                                    50% {background: rgb(112, 2, 2)}
+                                    100%{background: red}
+                                }
+                            }
+                        }
+                    }
+                    &.dl2 {
+                        .percent {
+                        background-color: rgb(0, 132, 255);
+                            &.ing {
+                                animation: dl2 1s infinite;
+                                @keyframes dl2 {
+                                    0%  {background-color: rgb(0, 132, 255)}
+                                    50% {background: rgb(2, 65, 124)}
+                                    100%{background: rgb(0, 132, 255)}
+                                }
+                            }
+                        }
+                    }
+                    &.dl3 {
+                        .percent {
+                        background-color: rgb(255, 217, 0);
+                            &.ing {
+                                animation: dl3 1s infinite;
+                                @keyframes dl3 {
+                                    0%  {background-color: rgb(255, 217, 0)}
+                                    50% {background: rgb(117, 100, 2)}
+                                    100%{background: rgb(255, 217, 0)}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        .thongso {
+            width: 80%;
+            height: 240px;
+            margin: 15px auto;
+            .stat {
+                width: 100%;
+                height: 40px;
+                border-bottom: solid 1px black;
+                display: flex;
+                .short {
+                    width: 20%;
+                    height: 100%;
+                    padding-top: 4px;
+                    img{height: 20px; width: 20px;}
+                    i {font-size: 20px;margin-top:3px;}
+                }
+                .long{
+                    width: 30%; 
+                    height: 100%;
+                    font-weight: bolder; 
+                    color: rgb(213, 219, 224);
+                    padding-top: 6px;
+                    
+                }
+                .num {height:80% ;font-weight: 100; border: solid 2px rgb(184, 178, 183);}
+            }
+                
+        }   
+    }
+    .slots{
+        width: 20%;
+        height: 100%;       
+        border: solid 3px rgb(29, 85, 150);
+        padding: 100px 0;
+        text-align: center;
+        color: #c0c5c0;
+        .ok { 
+            margin-top: -10px;
+            height: 194px;
+            width: 260px;
+            background-color: rgba(0, 0, 0, 0.425);
+            position: relative;
+            img {
+                position: absolute;
+                width: 20px;   
+                &.img1{top: 90px;left: 1px;}           
+                &.img2{top: 2px;left: 50px;}
+                &.img3{top: 2px;right: 50px;}
+                &.img4{top: 90px;right: 1px;}
+                &.img5{bottom: 1px;right: 50px;}
+                &.img6{bottom: 1px;left: 50px;}
+                
+            }
+        }
+        .cvas {
+            position: absolute;
+            bottom: 0;
+            &#thongso1 {left: 2.5%;}
+            &#thongso2 {right: 2.5%;}
+        }
+        .slot {
+            height: 100px;
+            width: 100%;
+            margin: 10px 0;
+            background-color: rgba(8, 29, 44, 0.849);
+            display: flex;
+            border-top: 2px solid rgb(136, 143, 155);
+            border-bottom: 2px solid rgb(136, 143, 155);
+            overflow: hidden;
+            img {width: 132%;height: 198%;margin:-6% 0 0 -10%;}
+            .name {
+                width: 100%;
+                margin-top: 70px;
+                font-size: 22px;
+                color: rgb(216, 215, 215);
+                z-index: 10;
+                &.player1 {
+                    padding: 0 10px 5px 0;
+                    text-align: right;
+                }
+                &.player2 {
+                    padding: 0 10px 0 5px;
+                    text-align: left;
+                }
+            }
+            &.picking {
+                border: solid 4px rgb(65, 143, 233);
+                animation: pick 1.5s infinite;
+                @keyframes pick {
+                    0%   {border-color: rgb(65, 143, 233)}
+                    50% {border-color: rgb(38, 55, 131);}
+                    100%{border-color: rgb(65, 143, 233)}
+                }
+            }
+            .ava {
+                width: 30%;
+                height: 100%;
+                img {
+                    width: 80%;
+                    border-radius: 10px;
+                    margin: 18px 10%;
+                    min-height: min-content;
+                }
+            }
+            .info {
+                height: 100%;
+                width: 70%;
+                padding: 18px 15px;
+                font-size: 25px;
+                color: aliceblue;
+                p{ 
+                    margin-top: 10px;
+                    span {
+                        width: min-content;
+                        font-size: 20px;
+                        font-weight: bolder;
+                        padding: 0 4px;
+                        border: solid 2px yellow;
+                        border-radius: 4px;
+                        color: yellow;
+                        background-color: rgb(129, 117, 5);
+                    }
+                    i {
+                        color: yellowgreen;
+                        font-size: 26px;
+                        font-weight: bolder;
+                    }
+                    img {
+                        height: 26px;
+                        display: inline;
+                        margin-bottom: -5px;
+                    }
+                }
+                
+            }
+        }
+        .rule {
+            width: 100%;
+            height: 540px;
+            
+        }
+    }
+    .map{
+        width: 60%;
+        height: 100%;
+        background-image: url(/image/background/map.webp);
+        background-repeat:no-repeat ;
+        background-position: center;
+    }
+    .more {
+        width: 13%;
+        height: 45px;
+        background-color: yellow;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        text-align: center;
+        font-size: 20px;
+        color: brown;
+        padding-top: 7px;
+        border: 4px solid rgba(138, 14, 14, 0.541);
+        border-left: unset;    
+    }
+    .starting {
+        width: 24%;
+        height: 105px;
+        background-color: rgb(3, 0, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 28px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgba(231, 243, 57, 0.74);
+        padding-top: 28px;
+        margin-left: -2%;
+        border: solid 5px rgb(29, 85, 150);
+        border-radius: 0 0 45px 45px;
+        border-bottom: unset;
+    }
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 20%;
+        height: 40px;
+        width: 60%;
+        text-align: center;
+        border-top: solid 5px rgb(29, 85, 150);
+        background-color: black;
+        img{
+            width: 60%;
+            height: 170px;
+            margin-top: -60px;
+        }
+    }
+    #moment {
+        position: absolute;
+        height: 70px;
+        width: 7%;
+        top: 0;
+        left: 36%;
+        -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+        -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+        -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+        img {
+            width: 100%;
+            animation: bound-anim 1s 0.0s infinite;            
+            @keyframes bound-anim {
+                0%,100% {margin-left: 0;}
+                50% {margin-left: -25%;}        
+            }           
+        }
+        &.change {
+            top: 0;
+            left: 57%; 
+            transform: unset;
+        }
+        
+    }
+    .phase {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        text-align: center;
+        border: solid 3px rgb(155, 153, 146);
+        background-color: black;
+        display: flex;
+        .ally {
+            width: 35%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .enemy {
+            width: 35%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .versus {
+            width: 30%;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            color: rgba(255, 255, 0, 0.671);
+            padding-top: 20px;
+        }
+        .turn {
+            width: 16%;
+            margin: 13px 1.5%;
+            background-color: rgb(31, 28, 73);
+            border: solid 2px rgb(175, 175, 175);
+            img {
+                width: 350%;
+                margin-left: -125%;
+                margin-top: -20%;
+            }
+            overflow: hidden;         
+            &.banning {
+                border: solid 3px rgb(255, 47, 47);
+                animation: ban 1.5s infinite;
+                @keyframes ban {
+                    0%   {border-color: red;}
+                    50% {border-color: rgb(104, 20, 20);}
+                    100%{border-color: red;}
+                }
+            }
+            &.banned {
+                animation: lock 0.3s normal;
+                border: solid 5px rgb(61, 12, 12);
+                @keyframes lock {
+                    0%{border: solid 2px red;}                    
+                    30%{border: solid 3px rgb(175, 37, 37);}
+                    100% {border: solid 5px rgb(61, 12, 12);}
+                    
+                }
+            }
+        }
+    }
+    .search-champ {
+        position: absolute;
+        left: 20%;
+        top: 100px;
+        width: 60%;
+        height: 60px;
+        border-bottom: solid 2px rgb(155, 153, 146);
+        text-align: center;
+        color: aliceblue;
+        display: flex;
+        justify-content: space-around;
+        .lanes {
+            display: flex;
+            width: 40%;
+            height: 100%;
+            padding: 0 0;
+            .lane {
+                width: 16.6%; 
+                height: 100%;
+                font-size: 28px;
+                border: solid 1px rgb(155, 153, 146);
+                border-top: unset;
+                border-bottom: unset;
+                p{margin-top: 25%;height: 100%; font-size: 80%;}
+                img {width: 60%;height:32px;margin-top: 25%;}
+                &.laning {
+                    border: solid 4px rgb(155, 153, 146);
+                }
+            }
+        }
+        .searching {
+            height: 100%;
+            width: 30%;
+            padding-top: 15px;
+            input {
+                height: 30px;
+                width: 60%;
+                font-size: 18px;
+                background-color: rgb(177, 177, 228);
+                color: rgb(32, 33, 34);
+                font-weight: bolder;
+            }
+        }
+    }
+    .pick-champ {
+        width: 60%;
+        height: 650px;
+        position: absolute;
+        left: 20%;
+        top: 160px;
+        background-color: rgba(4, 13, 31, 0.664);
+        text-align: center;
+        padding-left: 35px;
+        padding-top: 20px;
+        overflow: auto; 
+        border-bottom: solid 5px rgb(70, 75, 153);
+        .champs {
+            min-height: 100%;
+            display: grid;
+            grid-template-columns: repeat(6, 120px);
+            grid-template-rows: repeat(5, 120px);
+            .champ {
+                width: 110px;
+                height: 110px;
+                background-color: black;
+                margin: 5px 5px;
+                border: solid 3px rgb(151, 151, 151);
+                overflow: hidden;
+                display: none;
+                &.chosen {display: unset;}
+                img {
+                    width: 400%;
+                    margin-left: -155px;
+                    margin-top: -15px;
+                }
+                .champ-info {
+                    position: absolute;
+                    width: 150px;
+                    height: 60px;
+                    margin-left: -75px;
+                    margin-top: -250px;
+                    padding: 0;
+                    background-color: black;
+                    color: rgb(252, 138, 138);
+                    font-weight: bolder;
+                    border: solid 2px rgb(153, 163, 9);
+                    border-bottom: solid 3px rgb(153, 163, 9);
+                    display: none;
+                    text-align: center;
+                    p{width: 100%;margin: 5px 0;}
+                    .info-all-cs {
+                        width: 100%;
+                        display: flex;
+                        margin-top: 10px;
+                        .info-cs {
+                            width: 33.33%;
+                            border: solid 1px rgb(153, 163, 9);
+                            font-size: 17px;
+                            color:rgb(240, 225, 224) ;
+                            img {width: 11px;margin: 0;}
+                            padding-top: 2px;
+                        }
+                    }
+                   
+                   
+                }
+                &:hover {.champ-info{display: unset;}}
+                &.being {
+                    border-color: rgb(37, 128, 231);
+                    animation: being 1.2s infinite;
+                    @keyframes being {
+                        0%   {border-color: rgb(37, 128, 231);}
+                        50% {border-color: rgb(7, 33, 102);}
+                        100%{border-color: rgb(37, 128, 231);}
+                    }
+                }
+                &.done {
+                    width: 100px;
+                    height: 100px;
+                    margin: 10px 10px;
+                    border-color: rgb(43, 41, 41);
+                    img {mix-blend-mode:hard-light;margin-left: -140px;}
+                }
+            }
+        }
+    }
+}
+    .button {
+        display: flex;
+        position: absolute;
+        justify-content: space-evenly;
+        bottom: 0;
+        left: 20%;
+        height: 40px;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.473);
+        border-bottom: solid 2px rgb(70, 75, 153);
+        .btn{
+            width: 15%;
+            height: 80%;
+            margin: auto 0;
+            border: solid 3px rgba(255, 255, 255, 0.534);
+            border-radius: 2px;
+            background-color: rgb(223, 149, 11);
+            font-size: 20px;
+            text-align: center;
+            font-weight: bolder;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+            &:hover {
+                background-color: rgba(255, 0, 0, 0.568);
+                color: rgb(182, 179, 179);
+            }
+        }
+    }
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #acb7d6; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(70, 75, 153); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(22, 51, 145); 
+}

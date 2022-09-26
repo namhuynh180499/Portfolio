@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-image: url(/image/background/bg_theme_02.jpg);">
+    <script> 
+        let toper = {};
+        let jung = {};
+        let mid = {};
+        let ad = {};
+        let sup = {};
+
+        let players = [toper, jung, mid, ad, sup];
+        
+        for(let i=1;i<6;i++) {
+            players[i-1].name = sessionStorage.getItem(`player`+i+`_name`);
+            if(sessionStorage.getItem(`player`+i+`_sex`) != false)
+                {players[i-1].sex = true}
+            else{players[i-1].sex = false}
+            players[i-1].advan = sessionStorage.getItem(`player`+i+`_advan`);
+        }
+        console.log(players);
+
+    </script>
+    
+    <div class="main" style="background-image: unset;">
+        <div class="starting">STARTING LINEUP</div>
+        <div class="slots">
+            <div class="slot slot1"><div class="ava"></div><div class="info"></div></div>
+            <div class="slot slot2"><div class="ava"></div><div class="info"></div></div>
+            <div class="slot slot3"><div class="ava"></div><div class="info"></div></div>
+            <div class="slot slot4"><div class="ava"></div><div class="info"></div></div>
+            <div class="slot slot5"><div class="ava"></div><div class="info"></div></div>        
+        </div>
+        <div class="more" onclick="changeInfo()">MORE STATS <i class="fa fa-refresh"></i> </div>
+        
+
+        <div class="map">
+            <div class="logo"><img src="/image/icon/logo2.png"></div>
+            <div class="button">
+                <div class="btn" onclick="window.location.href='/index.html';">BACK</div>
+                <div class="btn" onclick="window.location.href='/banpick.html';">NEXT</div>
+            </div>
+        </div>
+
+
+        <div class="slots">
+            <div class="rule"></div>
+        </div>       
+    </div>
+
+    <script>
+        let lane;
+        for(let i = 1; i<6;i++){
+            switch(i){
+                case 1: lane = "TOP"; break;
+                case 2: lane = "JUN"; break;
+                case 3: lane = "MID"; break;
+                case 4: lane = "ADC"; break;
+                case 5: lane = "SUP"; break;
+            }
+            document.getElementsByClassName('ava')[i-1].innerHTML += `<img src="/image/background/male.jpg" alt="">`;                
+            document.getElementsByClassName('info')[i-1].innerHTML += players[i-1].name + `<p class="info`+i+`"><span>`+lane+`</span></p>`;
+            if(sessionStorage.getItem(`main`)==(`p`+i)){
+                document.querySelector('.info'+i).innerHTML += `&nbsp&nbsp<i class="fa fa-angle-double-up" aria-hidden="true"></i>`;
+            }
+            if(sessionStorage.getItem(`main`)==(`p`+i)){
+            document.querySelector('.info'+i).innerHTML += `&nbsp <img src="/image/icon/captain.png">`
+            }
+        }
+        
+    </script>
+    <script src="/scripts/btn/buttons.js"></script>
+</body>
+</html>
